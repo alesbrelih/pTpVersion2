@@ -1,0 +1,147 @@
+﻿<Window x:Class="pTpVersion2.Windows.FirmWindows.ManageFirm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ManageFirm"
+        WindowStyle="None" AllowsTransparency="True"
+        BorderBrush="#a3a3a3" BorderThickness="3" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+
+
+        </Grid.RowDefinitions>
+        <!--TOP LABEL-->
+        <Grid Grid.Row="0">
+            <Label Content="Podjetje" Style="{DynamicResource LabelWindowHeader}"/>
+            <WrapPanel FlowDirection="RightToLeft">
+                <Button x:Name="BtnExit" Style="{DynamicResource WindowStateClose}"/>
+                <Button x:Name="BtnMinimize" Style="{DynamicResource WindowStateMinimize}"/>
+            </WrapPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" Content="Ime Podjetja" Style="{DynamicResource LabelProperties}"/>
+                <TextBox Grid.Column="1" Text="Ime Podjetja Sample"/>
+
+                <Grid Grid.Row="1" ColumnSpan="2">
+                    <GroupBox Header="   Poslovna Oseba   " BorderBrush="LightGray">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            
+
+                            <ComboBox Grid.Row="0"/>
+
+                            <Expander Grid.Row="1" Grid.ColumnSpan="2" FlowDirection="RightToLeft" Header="Podrobnosti">
+                                <GroupBox Header="Poslovna Oseba" FlowDirection="LeftToRight" >
+                                    <Grid FlowDirection="LeftToRight">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+
+                                            <RowDefinition Height="1.5*"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Grid.Column="0" Content="Ime: " Style="{DynamicResource LabelProperties}"/>
+                                        <TextBox Grid.Row="0" Grid.Column="1" Text="SampleName " />
+
+                                        <Label Grid.Row="1" Grid.Column="0" Content="Priimek:" Style="{DynamicResource LabelProperties}"/>
+                                        <TextBox Grid.Row="1" Grid.Column="1" Text="SampleSurname"/>
+
+                                        <Label Grid.Row="2" Grid.Column="0" Content="Email: " Style="{DynamicResource LabelProperties}"/>
+                                        <TextBox Grid.Row="2" Grid.Column="1" Text="SampleEmail"/>
+
+                                        <Label Grid.Row="3" Grid.Column="0" Content="Telefon: " Style="{DynamicResource LabelProperties}"/>
+                                        <TextBox Grid.Row="3" Grid.Column="1" Text="SampleTelephone"/>
+
+                                        <Label Grid.Row="4" Grid.Column="0" Content="Tujec" Style="{DynamicResource LabelProperties}"/>
+                                        <CheckBox Grid.Row="4" Grid.Column="1"></CheckBox>
+
+                                        <Button Grid.Row="5" Grid.Column="0" Style="{DynamicResource ButtonMainStyle}"/>
+                                        <Button Grid.Row="5" Grid.Column="1" Style="{DynamicResource ButtonMainStyle}"/>
+                                    </Grid>
+                                </GroupBox>
+                            </Expander>
+                        </Grid>
+                    </GroupBox>
+                    
+                </Grid>
+                
+                
+
+                <Grid Grid.Row="2" Grid.ColumnSpan="2">
+                    <GroupBox Header="   Kontaktna Oseba   ">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <ComboBox Grid.Row="0"/>
+                            <Expander Grid.Row="1" FlowDirection="RightToLeft" Header="Podrobnosti">
+                                <Grid FlowDirection="LeftToRight">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+
+                                            <RowDefinition Height="1.5*"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Grid.Column="0" Content="Ime: " Style="{DynamicResource LabelProperties}"/>
+                                        <TextBox Grid.Row="0" Grid.Column="1" Text="SampleName " />
+
+                                        <Label Grid.Row="1" Grid.Column="0" Content="Priimek:" Style="{DynamicResource LabelProperties}"/>
+                                        <TextBox Grid.Row="1" Grid.Column="1" Text="SampleSurname"/>
+
+                                        <Label Grid.Row="2" Grid.Column="0" Content="Email: " Style="{DynamicResource LabelProperties}"/>
+                                        <TextBox Grid.Row="2" Grid.Column="1" Text="SampleEmail"/>
+
+                                        <Label Grid.Row="3" Grid.Column="0" Content="Telefon: " Style="{DynamicResource LabelProperties}"/>
+                                        <TextBox Grid.Row="3" Grid.Column="1" Text="SampleTelephone"/>
+
+                                        <Label Grid.Row="4" Grid.Column="0" Content="Tujec" Style="{DynamicResource LabelProperties}"/>
+                                        <CheckBox Grid.Row="4" Grid.Column="1"></CheckBox>
+
+                                        <Button Grid.Row="5" Grid.Column="0" Style="{DynamicResource ButtonMainStyle}"/>
+                                        <Button Grid.Row="5" Grid.Column="1" Style="{DynamicResource ButtonMainStyle}"/>
+                                    </Grid>
+                            </Expander>
+
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+                
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>

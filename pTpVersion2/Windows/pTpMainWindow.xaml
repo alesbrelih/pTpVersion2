@@ -1,0 +1,88 @@
+﻿<Window x:Class="pTpVersion2.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" WindowStyle="None" 
+        UseLayoutRounding="True" AllowsTransparency="True" Background="White"
+        BorderBrush="#a3a3a3" BorderThickness="3">
+    <Grid>
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition/>
+    		<ColumnDefinition Width="150"/>
+    	</Grid.ColumnDefinitions>
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="Auto"/>
+    		<RowDefinition Height="Auto"/>
+    		<RowDefinition/>
+    	</Grid.RowDefinitions>
+		
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+			<Label Content="PTP Application POWERED BY JERNEJ PRINCIC" Style="{DynamicResource LabelWindowHeader}"/>
+			<WrapPanel FlowDirection="RightToLeft">
+				<Button	x:Name="BtnClose" Click="BtnClose_OnClick" Content="Close" Style="{DynamicResource WindowStateClose}"/>
+                <WrapPanel FlowDirection="LeftToRight">
+                    <Button Content="Restore" Style="{DynamicResource WindowStateRestore}"/>
+                </WrapPanel>
+                <Button Content="Maximize" Style="{DynamicResource WindowStateMaximize}"/>
+				<Button Content="Minimize" Style="{DynamicResource WindowStateMinimize}"/>
+			</WrapPanel>
+		</Grid>
+
+		<Menu Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Style="{DynamicResource MenuStyleBase}">
+            <MenuItem Header="File" Template="{DynamicResource MenuItemControlTemplateBase}"/>
+            <MenuItem Header="About" Template="{DynamicResource MenuItemControlTemplateBase}"/>
+		</Menu>
+
+        <Grid Grid.Row="2" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="8*"/>
+            </Grid.RowDefinitions>
+            <GroupBox Header="   Search   " Grid.Row="0">
+                <Grid>
+                    <TextBox Text="SEARCHSTUFF"/>
+                </Grid>
+
+            </GroupBox>
+            <GroupBox Header="Data Display" Grid.Row="1">
+                <TabControl x:Name="TControlDataDisplay" Grid.Row="1" SelectionChanged="TControlDataDisplay_OnSelectionChanged">
+                    <TabItem Header="Vse">
+                        TAB CONTROL 1
+                    </TabItem>
+                    <TabItem Header="Podjetja">
+                        <DataGrid ItemsSource="{Binding Firms}" AutoGenerateColumns="False" SelectedItem="{Binding SelectedFirm,Mode=TwoWay}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Ime Podjetja"/>
+                                <DataGridTextColumn Header="Poslovna Oseba"/>
+                                <DataGridTextColumn Header="Kontaktna Oseba"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </TabItem>
+                    <TabItem Header="Potencialne Stranke">
+                        TAB CONTROL 3
+                    </TabItem>
+                    <TabItem Header="Osebe" Height="22" VerticalAlignment="Bottom">
+                        <DataGrid SelectedIndex="{Binding SelectedPersonIndex,Mode=TwoWay}" SelectedItem="{Binding SelectedPerson,Mode=TwoWay}" ItemsSource="{Binding Persons}" AutoGenerateColumns="False" HorizontalScrollBarVisibility='Disabled' HeadersVisibility="Column">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Ime" Width="1*" Binding="{Binding Name}"/>
+                                <DataGridTextColumn Header="Priimek" Width="1*" Binding="{Binding Surname}"/>
+                                <DataGridTextColumn Header="Email" Width="1*" Binding="{Binding Email}"/>
+                                <DataGridTextColumn Header="Telefon" Width="1*" Binding="{Binding Telephone}"/>
+                                <DataGridTextColumn Header="Tujec" Width="1*" Binding="{Binding ForeignerDisplay}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </TabItem>
+                </TabControl>
+
+            </GroupBox>
+
+        </Grid>
+        <GroupBox Grid.Column="1" Grid.Row="2" Header="Actions">
+            <StackPanel Grid.Column="1" Grid.Row="2">
+                <Button x:Name="BtnCreate" Click="BtnCreate_OnClick" Content="Add" Style="{DynamicResource ButtonMainStyle}" Width="100"/>
+                <Button x:Name="BtnEdit" Click="BtnEdit_OnClick" Content="Edit" Style="{DynamicResource ButtonMainStyle}"/>
+                <Button x:Name="BtnDelete" Click="BtnDelete_OnClick" Content="Delete" Style="{DynamicResource ButtonMainStyle}"/>
+            </StackPanel>
+        </GroupBox>
+        
+    </Grid>
+</Window>

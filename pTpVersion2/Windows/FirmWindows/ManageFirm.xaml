@@ -34,6 +34,8 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
                 <Label Grid.Column="0" Content="Ime Podjetja" Style="{DynamicResource LabelProperties}"/>
@@ -94,7 +96,7 @@
                 
 
                 <Grid Grid.Row="2" Grid.ColumnSpan="2">
-                    <GroupBox Header="   Kontaktna Oseba   ">
+                    <GroupBox Header="   Kontaktna Oseba   " BorderBrush="LightGray">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
@@ -138,6 +140,26 @@
 
                         </Grid>
                     </GroupBox>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="0" ColumnSpan="2">
+                    <Expander Header="Partnertstva">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                                <ComboBox></ComboBox>
+                            </Grid>
+                            
+                        </Grid>
+                    </Expander>
                 </Grid>
                 
             </Grid>

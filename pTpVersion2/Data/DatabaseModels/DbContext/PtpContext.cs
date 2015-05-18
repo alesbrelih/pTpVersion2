@@ -18,5 +18,7 @@ namespace pTpVersion2.Data.DatabaseModels.DbContext
         public DbSet<Firm> Firms { get; set; }
 
         public DbSet<Customer> Customers { get; set; }
+
+        public DbSet<Partnership> Partnerships { get; set; }
     }
 }

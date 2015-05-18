@@ -82,6 +82,7 @@
     <Compile Include="Data\DatabaseModels\Bussiness.cs" />
     <Compile Include="Data\DatabaseModels\Customer.cs" />
     <Compile Include="Data\DatabaseModels\DbContext\PtpContext.cs" />
+    <Compile Include="Data\DatabaseModels\Partnership.cs" />
     <Compile Include="Data\DatabaseModels\Person.cs" />
     <Compile Include="Data\DatabaseModels\PotencialCustomer.cs" />
     <Compile Include="Data\DatabaseModels\ViewModels\CustomerView.cs" />

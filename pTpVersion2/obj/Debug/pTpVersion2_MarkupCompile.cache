@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Ales\Desktop\HOME_PROJECTS\pTpVersion2\pTpVersion2\obj\Debug\
+C:\C#\pTpVersion2\pTpVersion2\obj\Debug\
 pTpVersion2
 none
 false
 DEBUG;TRACE
-C:\Users\Ales\Desktop\HOME_PROJECTS\pTpVersion2\pTpVersion2\App.xaml
+C:\C#\pTpVersion2\pTpVersion2\App.xaml
 6-2084283396
 
-26-413042239
-20-491989127
+27-1500554729
+20752192681
 Styles\pTpStyles.xaml;Windows\DialogWindows\DialogWindow.xaml;Windows\FirmWindows\ManageFirm.xaml;Windows\PersonWindows\ManagePerson.xaml;Windows\PersonWindows\OverviewPerson.xaml;Windows\pTpMainWindow.xaml;
 
 False
